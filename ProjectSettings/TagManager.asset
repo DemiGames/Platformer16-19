@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - SliderLimit
+  - Enemy
+  - Damagable
   layers:
   - Default
   - TransparentFX
