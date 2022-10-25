@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6172568465372290936}
-  - component: {fileID: 6062298530100730788}
   - component: {fileID: 6119563113675721954}
   - component: {fileID: 6289960517981214684}
   - component: {fileID: 6128300069986202676}
@@ -39,20 +38,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6062298530100730788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6177849343080325178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba8b435a8dc3f604e9a13c4acd7081c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_speed: 4
-  m_jumpForce: 7.5
 --- !u!95 &6119563113675721954
 Animator:
   serializedVersion: 4
@@ -320,10 +305,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthBar
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2041953473018484115, guid: 0aa45a4261205b24ebc655ed614a2fcb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0aa45a4261205b24ebc655ed614a2fcb, type: 3}
 --- !u!4 &1056473002035386007 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3201395422780902429, guid: 0aa45a4261205b24ebc655ed614a2fcb, type: 3}
   m_PrefabInstance: {fileID: 2505405151095216778}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4820806181490310281 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6927113590151996931, guid: 0aa45a4261205b24ebc655ed614a2fcb, type: 3}
+  m_PrefabInstance: {fileID: 2505405151095216778}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &680580083526606290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4820806181490310281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d72a6ba4fdaa44083c099a1b89673a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHP: 0
+  maxHP: 100

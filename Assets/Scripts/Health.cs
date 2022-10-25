@@ -9,12 +9,14 @@ public class Health : MonoBehaviour
     [SerializeField] float maxHP;
     Slider hpSlider;
     Damaging damaging;
+    public bool isDead;
     private void Awake()
     {
         hpSlider = GetComponentInChildren<Slider>();
         currentHP = maxHP;
         hpSlider.value = maxHP;
         damaging = GetComponentInParent<Damaging>();
+        isDead = false;
     }
     public void GetDamage(float damage)
     {

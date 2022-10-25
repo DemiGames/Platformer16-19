@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2675312465085793529}
   - component: {fileID: 2834395292114625246}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 803662410101792167}
   - component: {fileID: 7893103673413299646}
   - component: {fileID: 1109305986674249599}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 6369331457891897511}
   - component: {fileID: 1738653526404205490}
   - component: {fileID: 6322991265127907341}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: HPCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,8 +224,8 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 31677047
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &1738653526404205490
 MonoBehaviour:
@@ -276,7 +276,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1253507941325341899}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,7 +314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3201395422780902429}
   - component: {fileID: 2041953473018484115}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,7 +362,7 @@ GameObject:
   - component: {fileID: 6447789998456732948}
   - component: {fileID: 1944053784849868101}
   - component: {fileID: 1068366868269499497}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
