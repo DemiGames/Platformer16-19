@@ -8,14 +8,12 @@ public class Health : MonoBehaviour
     [SerializeField] float currentHP;
     [SerializeField] float maxHP;
     Slider hpSlider;
-    Damaging damaging;
     public bool isDead;
-    private void Awake()
+    private void Start()
     {
         hpSlider = GetComponentInChildren<Slider>();
         currentHP = maxHP;
         hpSlider.value = maxHP;
-        damaging = GetComponentInParent<Damaging>();
         isDead = false;
     }
     public void GetDamage(float damage)
@@ -25,7 +23,8 @@ public class Health : MonoBehaviour
         if (currentHP <= 0)
         {
             hpSlider.value = 0;
-            damaging.Die();
+            isDead = true;
         }
     }
+    
 }

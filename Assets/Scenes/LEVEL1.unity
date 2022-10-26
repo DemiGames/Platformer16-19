@@ -1461,54 +1461,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 680233979}
     m_Modifications:
-    - target: {fileID: 1562666600, guid: e3923ce12ac7289418d3157a9b65dfa6, type: 3}
-      propertyPath: m_Angle
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 1562666600, guid: e3923ce12ac7289418d3157a9b65dfa6, type: 3}
-      propertyPath: m_Anchor.x
-      value: -0.0022039413
-      objectReference: {fileID: 0}
-    - target: {fileID: 1562666600, guid: e3923ce12ac7289418d3157a9b65dfa6, type: 3}
-      propertyPath: m_Anchor.y
-      value: -0.10361552
-      objectReference: {fileID: 0}
-    - target: {fileID: 1562666600, guid: e3923ce12ac7289418d3157a9b65dfa6, type: 3}
-      propertyPath: m_UseLimits
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1562666600, guid: e3923ce12ac7289418d3157a9b65dfa6, type: 3}
-      propertyPath: m_EnableCollision
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1562666600, guid: e3923ce12ac7289418d3157a9b65dfa6, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 14.617795
-      objectReference: {fileID: 0}
-    - target: {fileID: 1562666600, guid: e3923ce12ac7289418d3157a9b65dfa6, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -1.6677413
-      objectReference: {fileID: 0}
-    - target: {fileID: 1562666600, guid: e3923ce12ac7289418d3157a9b65dfa6, type: 3}
-      propertyPath: m_ConnectedRigidBody
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1562666600, guid: e3923ce12ac7289418d3157a9b65dfa6, type: 3}
-      propertyPath: m_AutoConfigureConnectedAnchor
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1562666600, guid: e3923ce12ac7289418d3157a9b65dfa6, type: 3}
-      propertyPath: m_TranslationLimits.m_LowerTranslation
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1562666600, guid: e3923ce12ac7289418d3157a9b65dfa6, type: 3}
-      propertyPath: m_TranslationLimits.m_UpperTranslation
-      value: 1.82
-      objectReference: {fileID: 0}
-    - target: {fileID: 1562666605, guid: e3923ce12ac7289418d3157a9b65dfa6, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7892187241615640402, guid: e3923ce12ac7289418d3157a9b65dfa6, type: 3}
       propertyPath: m_Name
       value: PF Village Props - Platform R
@@ -7243,7 +7195,7 @@ GameObject:
   - component: {fileID: 7064426873533852857}
   - component: {fileID: 8689569377730601491}
   - component: {fileID: 8689569377730601492}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TX Village Props Wheelbarrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

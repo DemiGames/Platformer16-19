@@ -4,33 +4,56 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    [SerializeField] GameObject attackPoint;
-    Animator animator;
+    [SerializeField] Transform attackPoint;
+    [SerializeField] float damage;
+    public Animator animator;
     [SerializeField] float attackDelay;
+    [SerializeField] float attackRange;
+    [SerializeField] LayerMask humanoids;
     float currentAttackDelay;
-    private void Start()
+    PlayerLose playerLose;
+    Health health;
+    private void Awake()
     {
         currentAttackDelay = attackDelay;
-        animator = GetComponent<Animator>();
+        playerLose = GetComponent<PlayerLose>();
+        health = GetComponentInChildren<Health>();
+    }
+    private void Update()
+    {
+        if (health.isDead)
+            Die();
     }
     public void Attack(bool isAttacking)
     {
         if (isAttacking && currentAttackDelay >= attackDelay)
             StartCoroutine(StartAttack());
-    }
-    public void ActivateAttackPoint()
-    {
-        attackPoint.SetActive(true);
-    }
-    public void DeActivateAttackPoint()
-    {
-        attackPoint.SetActive(false);
+        
     }
     IEnumerator StartAttack()
     {
         animator.SetTrigger("Attacking");
         currentAttackDelay -= Time.deltaTime;
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, humanoids);
+        foreach (var enemy in hitEnemies)
+            enemy.GetComponentInChildren<Health>().GetDamage(damage);
         yield return new WaitForSeconds(attackDelay);
         currentAttackDelay = attackDelay;
+    }
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+            return;
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+    public void Die()
+    {
+        animator.SetTrigger("Death");
+        StartCoroutine(Lose());
+    }
+    IEnumerator Lose()
+    {
+        yield return new WaitForSeconds(1);
+        playerLose.losePanel.SetActive(true);
     }
 }
