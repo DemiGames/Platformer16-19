@@ -34,11 +34,14 @@ public class PlayerAttack : MonoBehaviour
     {
         animator.SetTrigger("Attacking");
         currentAttackDelay -= Time.deltaTime;
+        yield return new WaitForSeconds(attackDelay);
+        currentAttackDelay = attackDelay;
+    }
+    public void Hit()
+    {
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, humanoids);
         foreach (var enemy in hitEnemies)
             enemy.GetComponentInChildren<Health>().GetDamage(damage);
-        yield return new WaitForSeconds(attackDelay);
-        currentAttackDelay = attackDelay;
     }
     private void OnDrawGizmosSelected()
     {

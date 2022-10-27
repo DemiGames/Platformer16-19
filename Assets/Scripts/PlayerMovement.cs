@@ -25,12 +25,12 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("Jumping", !isGrounded);
         if (isJumpButtonPressed)
             Jump();
-        if (direction > 0)
+        if (direction > 0.1f)
         {
             HorizontalMovement(direction);
             transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
         }
-        else if (direction < 0)
+        else if (direction < -0.1f)
         {
             HorizontalMovement(direction);
             transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
