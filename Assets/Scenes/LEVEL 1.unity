@@ -358,7 +358,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.32, y: -1.93, z: -10}
+  m_LocalPosition: {x: 12.96, y: -0.62, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -399,50 +399,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &555466566
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 555466568}
-  - component: {fileID: 555466567}
-  m_Layer: 0
-  m_Name: EpicCameraMove
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &555466567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 555466566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5456ca3d8bc6c4d4ba11dff4b8c36081, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &555466568
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 555466566}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.4871252, y: -4.888142, z: -0.25005606}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &677153782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -903,7 +859,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000899534}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.32, y: -1.93, z: -10}
+  m_LocalPosition: {x: 12.96, y: -0.62, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -938,6 +894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5456ca3d8bc6c4d4ba11dff4b8c36081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 4805183063227186}
 --- !u!1001 &1174094995
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1523,8 +1480,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 22.881474, y: 3.9625015}
-      - {x: -20.036455, y: 4.0439787}
-      - {x: -20.41543, y: -11.440876}
+      - {x: -22.544727, y: 3.839222}
+      - {x: -22.667757, y: -12.6694145}
       - {x: 22.941725, y: -11.445568}
       - {x: 22.803085, y: -4.046873}
 --- !u!4 &1727152985
@@ -2550,6 +2507,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f0b414806fcbda47b9f242883104bb5, type: 3}
+--- !u!4 &4805183063227186 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4102001146104835936, guid: 188521d7d8761484fbe5420d8a88049f, type: 3}
+  m_PrefabInstance: {fileID: 4106207566785320018}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &61222591799093544
 PrefabInstance:
   m_ObjectHideFlags: 0

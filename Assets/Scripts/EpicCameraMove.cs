@@ -6,22 +6,24 @@ using UnityEngine;
 public class EpicCameraMove : MonoBehaviour
 {
     CinemachineVirtualCamera cvcCamera;
-    PlayerInput player;
-    float smoothing = 1;
-    Vector3 playerPos;
+    public Transform player;
+    float smoothing = 85f;
+    Vector3 velocity = Vector3.zero;
     private void Awake()
     {
         cvcCamera = GetComponent<CinemachineVirtualCamera>();
-        player = FindObjectOfType<PlayerInput>();
+        cvcCamera.Follow = null;
     }
     private void Start()
     {
-        playerPos = player.transform.position;
-        transform.position = Vector3.Lerp(transform.position, playerPos, smoothing * Time.deltaTime);
-        Invoke(nameof(StartFollow), 3);
+        Invoke(nameof(StartFollow), 5f);
+    }
+    private void Update()
+    {
+        transform.position = Vector3.SmoothDamp(transform.position, player.position, ref velocity, smoothing * Time.deltaTime);
     }
     void StartFollow()
     {
-        // cvcCamera.Follow = player.transform;
+        cvcCamera.Follow = player;
     }
 }
