@@ -1,18 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    LevelLoader levelLoader;
+    public static GameManager Instance;
+    public int coins;
+    public Text coinText;
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
-        levelLoader = FindObjectOfType<LevelLoader>();
+        if (Instance == null)
+        {
+            Instance = this;
+            transform.parent = null;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+            Destroy(gameObject);
+    }
+    private void Start()
+    {
+        coinText.text = coins.ToString();
     }
     public void Finished()
     {
         Debug.Log("Finished");
-        //open UI
+        LevelLoader.Instance.NextLevel();
+    }
+    public void AddCoin()
+    {
+        coins++;
+        coinText.text = coins.ToString();
     }
 }

@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
         animator.SetTrigger("Death");
         gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
         gameObject.GetComponent<BoxCollider2D>().enabled = false;
-        Invoke("DestroyEnemy", 1);
+        Invoke(nameof(DestroyEnemy), 1);
     }
     void DestroyEnemy()
     {

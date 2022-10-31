@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1589917197}
   - component: {fileID: 1589917196}
   - component: {fileID: 171601775798653256}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PF Village Props - Platform W
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ SliderJoint2D:
   m_GameObject: {fileID: 6072232795771451288}
   m_Enabled: 1
   serializedVersion: 4
-  m_EnableCollision: 0
+  m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 0}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity

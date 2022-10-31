@@ -3,9 +3,17 @@ using UnityEngine;
 
 public class LevelLoader : MonoBehaviour
 {
+    public static LevelLoader Instance;
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        if (Instance == null)
+        {
+            Instance = this;
+            transform.parent = null;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+            Destroy(gameObject);
     }
     public void LoadLevel(int level)
     {
