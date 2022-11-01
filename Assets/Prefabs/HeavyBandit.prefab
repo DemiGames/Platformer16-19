@@ -169,6 +169,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6b7ed6eabe05f244a588c34f6713557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 2
+  searchingRange: 3
+  attackRange: 2
+  humanoids:
+    serializedVersion: 2
+    m_Bits: 64
+  attackPoint: {fileID: 1488546617291291478}
 --- !u!1 &7847936018400715238
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +188,7 @@ GameObject:
   m_Layer: 6
   m_Name: AttackPoint
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

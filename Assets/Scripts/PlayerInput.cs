@@ -5,15 +5,17 @@ public class PlayerInput : MonoBehaviour
     PlayerMovement playerMovement;
     PlayerAttack playerAttack;
     Health health;
+    public bool canMove;
     private void Awake()
     {
         playerMovement = GetComponent<PlayerMovement>();
         playerAttack = GetComponent<PlayerAttack>();
         health = GetComponentInChildren<Health>();
+        canMove = true;
     }
     private void Update()
     {
-        if (!health.isDead)
+        if (!health.isDead && canMove)
         {
             float horizontalDirection = Input.GetAxis("Horizontal");
             bool isJumpButtonPressed = Input.GetButtonDown("Jump");
@@ -21,5 +23,7 @@ public class PlayerInput : MonoBehaviour
             playerMovement.Move(horizontalDirection, isJumpButtonPressed);
             playerAttack.Attack(isAttacking);
         }
+        if (GameManager.Instance.isFinished)
+            canMove = false;
     }
 }
